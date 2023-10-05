@@ -38,6 +38,8 @@ function strip_a_tag(string $input, string $tag, bool $removeTag): string {
         }
     }
 
+
+    // @see https://itecnote.com/tecnote/php-remove-parent-element-keep-all-inner-children-in-domdocument-with-savehtml/
     // Remove the generated doctype if it wasn't provided in $input
     if(!$keepDoctype) {
         $document->doctype->parentNode->removeChild($document->doctype);
